@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Sherman - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px;  /* Ajusta el tamaño máximo del aside */
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* esto es para que al pasar el cursor por una palabra tenga un comentario encima, se necesita todo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px; /* Establece el tamaño del contenedor del tooltip a 200px */
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltiptext img {
+            width: 200px; /* Establece el tamaño de la imagen dentro del tooltip a 200px */
+            height: auto;
+        }
+
+        /* Esto asegura que el tooltip sobre el Sherman Firefly tenga un tamaño de 300px */
+        .tooltip-firefly .tooltiptext {
+            width: 300px; /* Cambia el tamaño del tooltip del Sherman Firefly a 300px */
+        }
+
+        .tooltip-firefly .tooltiptext img {
+            width: 300px; /* Cambia el tamaño de la imagen en el tooltip del Sherman Firefly */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1>M4 Sherman</h1>
+        <div class="tank-image">
+            <img src="./images/M4 Sherman.png" width="600" height="400" alt="[Aquí va la imagen del Sherman]">
+        </div>
+        <p>El M4 Sherman, oficialmente Medium Tank, M4, fue el carro de combate medio más ampliamente utilizado por los Estados Unidos y los Aliados Occidentales en la Segunda Guerra Mundial. Fue nombrado "Sherman" por los británicos en honor del general de la Guerra de Secesión William Tecumseh Sherman y demostró ser fiable, relativamente barato de producir y estuvo disponible en grandes cantidades. Decenas de miles fueron distribuidos a través de la Ley de Préstamo y Arriendo a la Commonwealth Británica y la Unión Soviética.</p>
+        <br>
+        <h3>Historia</h3>
+        <p>El M4 evolucionó a partir del M3 Medium Tank, llamado por los británicos Lee o Grant y que era un carro medio que tenía su armamento principal en una montura lateral de recorrido limitado en el propio casco. El M4 retuvo gran parte del diseño mecánico de su antecesor, pero montó el cañón principal de 75 mm en una torreta central de giro horizontal completo. Una característica del Sherman era que contaba con un giroestabilizador vertical en el cañón que no era lo suficientemente preciso como para permitirle disparar en movimiento, pero ayudaba a mantener la retícula en el objetivo, de modo que cuando el vehículo se detenía para disparar el cañón apuntaba más o menos en la dirección correcta y agilizaba el disparo.</p>
+        <br>
+        <h3>primera batalla</h3>
+        <p>Cuando el M4 entró en combate por primera vez en el Norte de África con el Ejército Británico en la Segunda Batalla de El Alamein a finales de 1942, aumentó la ventaja de la fuerza blindada Aliada sobre la del Eje y fue superior a los diseños de carros alemanes e italianos más ligeros.[5] Por esta razón, el Ejército de los Estados Unidos creía que el M4 sería adecuado para ganar la guerra, ejerciendo inicialmente relativamente poca presión para un mayor desarrollo del carro de combate. Las restricciones logísticas y de transporte, como las limitaciones impuestas por las carreteras, los puertos y los puentes, también complicaron la introducción de un carro más capaz pero más pesado.[6] También entraron en servicio generalizado en los ejércitos Aliados batallones destructores de carros con vehículos construidos a partir del casco y el chasis del M4, pero con torretas abiertas y cañones de alta velocidad más potentes. Incluso en 1944, la mayoría de los Shermans M4 conservaban su cañón de 75 mm de doble propósito.[7] Para entonces, el M4 era inferior en potencia de fuego y blindaje a un número creciente de carros pesados ​​alemanes, pero fue capaz de combatir con la ayuda de una superioridad numérica considerable, una mayor fiabilidad mecánica, un mejor apoyo logístico y el apoyo de un número creciente de cazabombarderos y piezas de artillería.[8] A partir de 1844, gran parte de los Sherman fueron producidos con un cañón más largo y capaz, el Cañón M1 de 76 mm, o reacondicionados por los británicos con un cañón Ordnance QF de 17 libras de calibre 76,2 mm creando el conocido como 
+            <span class="tooltip tooltip-firefly"><strong>Sherman Firefly.</strong>
+                <span class="tooltiptext">
+                    <img src="./images/Sherman_Firefly.png" alt="" >
+                    Este tanque era una modificación británica del tanque estadounidense M4 Sherman, equipado con un poderoso cañón antitanque de 17 libras (76.2 mm). Este cañón era tan efectivo que permitió al Firefly "iluminar" a sus enemigos en combate, de ahí el apodo "Firefly"
+                </span>
+            </span>
+            </p>
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+    </div>
+    <aside>
+        <h2>Especificaciones del M4 Sherman</h2>
+        <p>Peso: 	34 - 35,3 t</p>
+        <p>Longitud: 	5,89 - 6,06 m</p>
+        <p>Anchura: 	2,62 m</p>
+        <p>Altura: 	2,74 m</p>
+        <p>Tripulación: 4 (comandante, artillero, cargador/operador de radio, conductor)</p>
+        
+        <p>motor: equipado con un  <span class="tooltip"><strong>Continental R-975 C1.</strong>
+            <span class="tooltiptext">
+                <img src="./images/Continental.png" alt="Continental R-975 C1." width="200" height="150">
+                fue una versión del motor radial de avión Wright R-975 Whirlwind estadounidense
+            </span>
+            o un Chrysler A57 , 350-425 CV
+        </span></p>     <!--para hacer que salga la imagen del motor y un texto pequeño junto con lo del styles-->
+        </p> 
+        <p>Velocidad máx:	34-40 km/h</p>
+        <p>Autonomía máx: 	161-193 km</p>
+
+    </aside>
+</body>
+</html>
