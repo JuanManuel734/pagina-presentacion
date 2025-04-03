@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiger I - Historia</title>
@@ -31,9 +33,46 @@
             border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
             border-radius: 5px; /* Añade bordes redondeados */
         }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip .tooltiptext img {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
     <div class="wiki-container">
         <h1>Tiger I</h1>
         <div class="tank-image">
@@ -54,12 +93,21 @@
     </div>
     <aside>
         <h2>Especificaciones del Tiger I</h2>
-        <p>Peso: 57,8 t en orden de combate</p>
-        <p>Longitud: 6,29 m (chasis)</p>
-        <p>Longitud: 8,45 m (incluyendo cañón)</p>
-        <p>Anchura: 3,55 m</p>
-        <p>Altura: 3 m</p>
-        <p>Tripulación: 5 (comandante, artillero, cargador, conductor, operador de radio/ametralladora)</p>
+        <p><strong>Peso:</strong> 57,8 t en orden de combate</p>
+        <p><strong>Longitud:</strong> 6,29 m (chasis)</p>
+        <p><strong>Longitud:</strong> 8,45 m (incluyendo cañón)</p>
+        <p><strong>Anchura:</strong> 3,55 m</p>
+        <p><strong>Altura:</strong> 3 m</p>
+        <p><strong>Tripulación:</strong> 5 (comandante, artillero, cargador, conductor, operador de radio/ametralladora)</p>
+        <p><strong>Motor:</strong> equipado con un motor a gasolina <span class="tooltip">Maybach HL 210.
+            <span class="tooltiptext">
+                <img src="./images/motor/Maybach HL 210.jpg" alt="Maybach HL 210">
+                El Maybach HL 210 TRM fue el primer motor que equipó el carro de combate pesado alemán Tiger (versión P45). Era un motor de gasolina en configuración V12 cuyo bloque era hecho en aleación ligera de aluminio, era refrigerado por agua, contaba con una cilindrada de 21,33 litros y desarrollaba una potencia de 650 CV a 3.000 revoluciones por minuto. Montaba 3 filtros de aire simples.
+            </span>
+        </span></p>
+        <h3>Armamento</h3>
+        <p><strong>Armamento principal:</strong> Cañón KwK 36 L/56 de 88 mm</p>
+        <p><strong>Armamento secundario:</strong> 2 ametralladoras MG 34 de 7,92 mm</p>
     </aside>
 </body>
 </html>

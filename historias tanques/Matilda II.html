@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matilda II - Historia</title>
@@ -31,9 +32,45 @@
             border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
             border-radius: 5px; /* Añade bordes redondeados */
         }
+        /* Estilos para el tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext img {
+    width: 100%;
+    height: auto;
+}
     </style>
 </head>
 <body>
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
     <div class="wiki-container">
         <h1>Matilda II</h1>
         <div class="tank-image">
@@ -61,14 +98,23 @@
     </div>
     <aside>
         <h2>Especificaciones del Matilda II</h2>
-        <p>Peso: 	25 t</p>
-        <p>Longitud: 5,61 m</p>
-        <p>Anchura: 2,59 m</p>
-        <p>Altura: 	2,51 m</p>
-        <p>	4 (comandante, artillero, cargador, conductor)</p>
-        <p>motor: 	equipado con dos motores diésel de 6 cilindros AEC o Leyland. Estos motores eran variantes comerciales modificadas para uso militar.</p>
-        <p>Velocidad máx:	26 km/h</p>
-        <p>Autonomía máx: 257 km</p>
+        <p><strong>Peso:</strong> 	25 t</p>
+        <p><strong>Longitud:</strong> 5,61 m</p>
+        <p><strong>Anchura:</strong> 2,59 m</p>
+        <p><strong>Altura:</strong> 	2,51 m</p>
+        <p> <strong>Tripulación:</strong>	4 (comandante, artillero, cargador, conductor)</p>
+        <p><strong>motor:</strong> equipado con dos motores diésel de <span class="tooltip"> <strong>6 cilindros AEC o Leyland.</strong>
+            <span class="tooltiptext">
+                <img src="./images/motor/Leyland_twin.jpg" alt="Motor AEC o Leyland">
+                Estos motores eran variantes comerciales modificadas para uso militar.
+            </span>
+        </span></p>     <!--para hacer que salga la imagen del motor y un texto pequeño junto con lo del styles-->
+        </p> 
+        <p><strong>Velocidad máx:</strong>	26 km/h</p>
+        <p><strong>Autonomía máx:</strong> 257 km</p>
+        <p> <strong>Arma principal:</strong> 	Cañón QF 2-pounder de 40 mm
+            o obús QF de 3 pulgadas en versiones CS</p>
+        <p> <strong>Arma secundaria:</strong> Ametralladora Besa de 7,92 mm</p>
     </aside>
 </body>
 </html>
