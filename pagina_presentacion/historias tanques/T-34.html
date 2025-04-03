@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-34 - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px; 
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip .tooltiptext img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1>T-34</h1>
+        <div class="tank-image">
+            <img src="./images/T-34.jpg" width="600" height="400" alt="[Aquí va la imagen del M3Lee]">
+        </div>
+        <p>El T-34 fue un tanque medio soviético usado de forma determinante en la Segunda Guerra Mundial y que tuvo un efecto profundo
+            y duradero en el campo del diseño de los carros de combate. En el momento de su introducción en 1940, el T-34-76, que es el
+            nombre que reciben sus primeras versiones hasta 1944 cuando se introduce el mejorado T-34-85, poseía una combinación sin 
+            precedentes de potencia de fuego, movilidad, protección y robustez. Su cañón de alta velocidad de 76,2 mm proporcionó un 
+            aumento sustancial en la potencia de fuego sobre cualquiera de sus contemporáneos, su armadura muy inclinada era difícil de 
+            penetrar para la mayoría de las armas anticarro existentes en ese momento, mientras que su sencillez facilitaba su 
+            fabricación en masa y su utilización.</p>
+        <br>
+        <h3>Historia</h3>
+        <p>El T-34 fue diseñado por un equipo de ingenieros soviéticos liderado por Mikhail Koshkin. Este tanque revolucionario fue 
+            desarrollado en la década de 1930 en la ciudad siberiana de Kazán. El T-34 se destacó por su blindaje inclinado, que 
+            ofrecía una mejor protección contra los proyectiles enemigos, y su potente cañón de 76 mm2.
+
+            El diseño del T-34 se basó en la necesidad de crear un tanque que pudiera superar a los modelos existentes en términos de 
+            blindaje y potencia de fuego. A pesar de las limitaciones económicas de la Unión Soviética, el T-34 fue diseñado para ser 
+            producido de manera económica y en grandes cantidades</p>
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+    </div>
+    <aside>
+        <h2>Especificaciones del T-34</h2>
+        <p><strong>Peso:</strong> 26,3 - 30,9 t</p>
+        <p><strong>Longitud:</strong> 6,68 m</p>
+        <p><strong>Anchura:</strong> 3 m</p>
+        <p><strong>Altura:</strong> 2,41- 2,6 m</p>
+        <p><strong>Tripulación:</strong> 4 (conductor, ametrallador, comandante/artillero, cargador)</p>
+        <p class="tooltip"><strong>Motor:</strong> V-2-34, 500 CV
+            <span class="tooltiptext"><img src="./images/v-2.jpg" alt="Motor V-2-34"></span>
+        </p>
+        <p><strong>Velocidad máx:</strong> 53 km/h</p>
+        <p><strong>Autonomía máx:</strong> 250–330 km</p>
+        <p><strong>Arma primaria:</strong> Cañón F-34 de 76,2 mm </p>
+        <p><strong>Arma secundaria:</strong> Ametralladoras DT de 7,62 mm</p>
+    </aside>
+</body>
+</html>

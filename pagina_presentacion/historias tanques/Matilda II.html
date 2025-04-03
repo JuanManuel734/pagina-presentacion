@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matilda II - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px; 
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* Estilos para el tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext img {
+    width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+    <div class="wiki-container">
+        <h1>Matilda II</h1>
+        <div class="tank-image">
+            <img src="./images/Matilda II.jpg" width="600" height="400" alt="[Aquí va la imagen del M3Lee]">
+        </div>
+        <p>El Tank, Infantry, Mark II, Matilda II fue un carro de infantería británico de la Segunda Guerra Mundial. Su diseño comenzó en 
+            1936 con el proyecto A12, que buscaba un sucesor más grande y mejor armado del primer carro de infantería británico, el A11 o 
+            Infantry Tank Mark I, que era tripulado por dos hombres y sólo estaba armado con una ametralladora. El Mark I también era llamado 
+            Matilda, por lo que el A12 inicialmente fue conocido como Matilda II o Matilda senior. Sin embargo, como el Mark I ya fue retirado 
+            en 1940, a partir de entonces el A12 pasó a ser llamado de forma generalizada simplemente como "Matilda".</p>
+        <br>
+        <h3>Historia</h3>
+        <p>Con su gruesa y pesada armadura, el Matilda II resultó un excelente carro de apoyo a la infantería pero con velocidad y armamento algo limitados. 
+            Durante la Batalla de Francia en 1940 resultó ser un blindado difícil de inutilizar por los alemanes, pues era casi inmune a los 
+            cañones estándar alemanes de 37 mm. Fue el único carro británico que prestó servicio desde el comienzo de la guerra hasta su final, 
+            aunque está particularmente asociado con la Campaña del Norte de África donde, gracias a su buen desempeño inicial, gozó del apodo 
+            de "Reina del desierto" hasta mediados de 1941. También fue enviado a la Unión Soviética como parte de la ayuda británica a la URSS,
+            donde no obtuvo resultados demasiado buenos. A partir de finales de 1941 comenzó a ser relegado de primera línea de combate por el 
+            más ligero y menos costoso Infantry Tank Mk.III, Valentine. Se dejó de fabricar en agosto de 1943 pero estuvo en servicio hasta el 
+            final de la guerra, por ejemplo en el Pacífico con los austalianos, pero también en numerosas variantes para ingenieros y propósitos
+            especiales entre los que destacan carros lanzapuentes, limpiaminas y lanzallamas.</p>
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+    </div>
+    <aside>
+        <h2>Especificaciones del Matilda II</h2>
+        <p><strong>Peso:</strong> 	25 t</p>
+        <p><strong>Longitud:</strong> 5,61 m</p>
+        <p><strong>Anchura:</strong> 2,59 m</p>
+        <p><strong>Altura:</strong> 	2,51 m</p>
+        <p> <strong>Tripulación:</strong>	4 (comandante, artillero, cargador, conductor)</p>
+        <p><strong>motor:</strong> equipado con dos motores diésel de <span class="tooltip"> <strong>6 cilindros AEC o Leyland.</strong>
+            <span class="tooltiptext">
+                <img src="./images/motor/Leyland_twin.jpg" alt="Motor AEC o Leyland">
+                Estos motores eran variantes comerciales modificadas para uso militar.
+            </span>
+        </span></p>     <!--para hacer que salga la imagen del motor y un texto pequeño junto con lo del styles-->
+        </p> 
+        <p><strong>Velocidad máx:</strong>	26 km/h</p>
+        <p><strong>Autonomía máx:</strong> 257 km</p>
+        <p> <strong>Arma principal:</strong> 	Cañón QF 2-pounder de 40 mm
+            o obús QF de 3 pulgadas en versiones CS</p>
+        <p> <strong>Arma secundaria:</strong> Ametralladora Besa de 7,92 mm</p>
+    </aside>
+</body>
+</html>
