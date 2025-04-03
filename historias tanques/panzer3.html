@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panzer III - Historia</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background-color: #f4f4f4; 
-            display: flex;
-            justify-content: center; /* Centra el contenido principal */
-            margin: 20px;
-        }
-        .wiki-container { 
-            max-width: 600px; 
-            background: white; 
-            padding: 20px; 
-            margin: 10px;
-        }
-        .tank-image { text-align: center; margin: 10px 0; }
-        .tank-image img { max-width: 100%; border-radius: 5px; }
-        .back { text-align: center; margin-top: 20px; }
-        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
-        aside {
-            background-color: white; /* Cambia el fondo a blanco */
-            padding: 20px; 
-            margin-left: 20px;
-            max-width: 200px; 
-            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
-            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
-            border-radius: 5px; /* Añade bordes redondeados */
-        }
-    </style>
-</head>
+    <head>
+
+        <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StuG III - Historia</title>
+        <style>
+            body { 
+                font-family: Arial, sans-serif; 
+                background-color: #f4f4f4; 
+                display: flex;
+                justify-content: center; /* Centra el contenido principal */
+                margin: 20px;
+            }
+            .wiki-container { 
+                max-width: 600px; 
+                background: white; 
+                padding: 20px; 
+                margin: 10px;
+            }
+            .tank-image { text-align: center; margin: 10px 0; }
+            .tank-image img { max-width: 100%; border-radius: 5px; }
+            .back { text-align: center; margin-top: 20px; }
+            .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+            aside {
+                background-color: white; /* Cambia el fondo a blanco */
+                padding: 20px; 
+                margin-left: 20px;
+                max-width: 200px; 
+                align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+                border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+                border-radius: 5px; /* Añade bordes redondeados */
+            }
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+    
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 200px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -100px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+    
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+    
+            .tooltip .tooltiptext img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
 <body>
     <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
     <input class="l" type="checkbox" id="dark-mode-toggle" />
@@ -60,11 +94,17 @@
     </div>
     <aside>
         <h2>Especificaciones del Panzer III</h2>
-        <p>Peso: 23 t</p>
-        <p>Longitud: 6,41 m</p>
-        <p>Anchura: 2,9 m</p>
-        <p>Altura: 2,5 m</p>
-        <p>Tripulación: 5 (comandante, artillero, cargador, conductor, operador de radio/tirador de ametralladora)</p>
+        <p><strong>Peso:</strong> 23 t</p>
+        <p><strong>Longitud:</strong> 6,41 m</p>
+        <p><strong>Anchura:</strong> 2,9 m</p>
+        <p><strong>Altura:</strong> 2,5 m</p>
+        <p><strong>Tripulación:</strong> 5 (comandante, artillero, cargador, conductor, operador de radio/tirador de ametralladora)</p>
+        <p class="tooltip"><strong>Motor:</strong> Maybach HL120 TRM, 300 CV
+            <span class="tooltiptext"></span>
+            <span class="tooltiptext"><img src="./images/motor/465px-Maybach_HL120.jpg" alt="Motor Maybach HL120"></span>
+        </p>
+        <p><strong>Velocidad máxima:</strong> 40 km/h en carretera</p>
+        <p><strong>Autonomía:</strong> 165 km en carretera</p>
     </aside>
 </body>
 </html>

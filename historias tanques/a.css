@@ -1,3 +1,5 @@
+/* este css se usa en las paginas individuales que estan en la carpeta "Historias tanques"*/
+
 body.dark-mode {
     background: rgb(0,0,0);
 background: linear-gradient(176deg, rgba(0,0,0,1) 0%, rgba(47,47,47,1) 92%, rgba(88,88,88,1) 100%, rgba(62,62,62,1) 100%);
