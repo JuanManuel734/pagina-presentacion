@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cromwell - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px;  /* Ajusta el tamaño máximo del aside */
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* esto es para que al pasar el cursor por una palabra tenga un comentario encima, se necesita todo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 400px; /* Establece el tamaño del contenedor del tooltip a 200px  de las especificaciones*/
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltiptext img {
+            width: 200px; /* Establece el tamaño de la imagen dentro del tooltip de especificaciones a 200px */
+            height: auto;
+        }
+
+        /* Esto asegura que el tooltip sobre el Sherman Firefly tenga un tamaño de 300px */
+        .tooltip-firefly .tooltiptext {
+            width: 415px; /* Cambia el tamaño del tooltip del Sherman Firefly a 300px */
+        }
+
+        .tooltip-firefly .tooltiptext img {
+            width: 400px; /* Cambia el tamaño de la imagen en el tooltip del Sherman Firefly */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1>Cromwell</h1>
+        <div class="tank-image">
+            <img src="./images/Cromwell_(A27M).jpg" width="600" height="400" alt="[Aquí va la imagen del Cromwell]">
+        </div>
+        <p>El A27M Cromwell fue el primer carro de combate puesto en servicio por los británicos que combinó la alta velocidad de un motor potente y fiable con una armadura razonable. Debido a los retrasos en su desarrollo, su armamento principal de 57 mm resultó inadecuado para su época. El cañón de alta velocidad y doble propósito previsto no se pudo instalar en su torreta, y el cañón de 75 mm de doble propósito y velocidad media con el que se actualizó resultó inadecuado para el combate contra los carros de combate enemigos, por lo que hubo que crear un nuevo modelo para incorporar el efectivo cañón de alta velocidad 17-pdr. El nuevo modelo recibiría el nombre de A34 Comet, pero no entró en servicio hasta los últimos compases de la guerra. Mientras, los Cromwell recibirían el apoyo anticarro de los A30 Challenger, de igual modo que los Sherman recibieron el apoyo de los Firefly.</p>
+        <br>
+        <h3>Origen y desarrollo</h3>
+        <p>El Cromwell entró en acción por primera vez en la Batalla de Normandía en junio de 1944. Fue desplegado en los regimientos de reconocimiento blindado del Royal Armoured Corps en las 7ª División Blindada, 11ª División Blindada y División Blindada de la Guardia. Mientras que los regimientos blindados de las dos últimas divisiones mencionadas estaban equipados con carros de origen estadounidense Sherman, los regimientos blindados de la 7ª División Blindada también estaban equipados con Cromwells. Los Centaur, debido a los problemas con su motor, no se utilizaron en combate, excepto los Mk.IV equipados con un obús de 95 mm, que se utilizaron en apoyo de los Royal Marines durante la invasión anfibia de Normandía. Muchos de los demás ejemplares del Centaur fueron remotorizados y convertidos en Cromwell, o convertidos en otros tipos de vehículos derivados del mismo chasis.</p>
+        <p>El desarrollo del Cromwell comenzó como parte de un esfuerzo por mejorar las capacidades de los tanques británicos tras las lecciones aprendidas en los primeros años de la Segunda Guerra Mundial. Se buscaba un diseño que combinara velocidad, maniobrabilidad y un armamento más efectivo. Inicialmente, el proyecto enfrentó numerosos desafíos, incluyendo problemas con el motor Liberty, que no ofrecía la potencia necesaria. Esto llevó a la adopción del motor Meteor, derivado de un motor de avión Rolls-Royce Merlin, que proporcionó la potencia y fiabilidad requeridas. Además, el diseño del chasis y la suspensión se optimizó para soportar el peso adicional del blindaje y el armamento, lo que resultó en un tanque más equilibrado y versátil.</p>
+        <br>
+        <br>
+        <h3>Ventajas y desventajas</h3>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Alta velocidad: Gracias a su motor Meteor, era uno de los tanques más rápidos de su época.</li>
+            <li>Maniobrabilidad: Su diseño le permitía moverse con facilidad en terrenos difíciles.</li>
+            <li>Versatilidad: Podía cumplir múltiples roles en el campo de batalla.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Armamento limitado: Su cañón de 75 mm era ineficaz contra los tanques más pesados enemigos.</li>
+            <li>Blindaje moderado: Aunque razonable, no era suficiente para resistir los impactos de armas antitanque más avanzadas.</li>
+        </ul>
+        <br>
+        
+
+        
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+    </div>
+    <aside>
+        <h2>Especificaciones del Cromwell</h2>
+        <p><strong>Peso:</strong> 27,6 t</p>
+        <p><strong>Longitud:</strong> 6,35 m</p>
+        <p><strong>Anchura:</strong> 2,91 m</p>
+        <p><strong>Altura:</strong> 2,49 m</p>
+        <p><strong>Tripulación:</strong> 5 (comandante, artillero, cargador/operador de radio, conductor y ametrallador)</p>
+        <p><strong>Motor:</strong> equipado con un <span class="tooltip"><strong>Rolls-Royce Meteor V12, 600 hp</strong>
+            <span class="tooltiptext">
+                <img src="./images/motor/Rolls-Royce meteor.jpeg" alt="Continental R-975 C1." width="200" height="150">
+                <br>
+                El Rolls-Royce Meteor fue un motor de gasolina V12 desarrollado en el Reino Unido durante la Segunda Guerra Mundial. Fabricado desde 1941, se utilizó en tanques británicos como el Cromwell desde 1944 hasta 1964. Derivado del motor aeronáutico Rolls-Royce Merlin, fue diseñado específicamente para vehículos blindados, convirtiéndose en uno de los motores de tanque británicos más exitosos.
+            </span>
+        </span></p>
+        <p><strong>Velocidad máx:</strong> 64 km/h</p>
+        <p><strong>Autonomía máx:</strong> 265 km</p>
+        <p><strong>Armamento principal:</strong> Cañón de 75 mm</p>
+        <p><strong>Armamento secundario:</strong> 2 × ametralladoras Besa de 7,92 mm</p>
+    </aside>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churchill - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px;  /* Ajusta el tamaño máximo del aside */
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* esto es para que al pasar el cursor por una palabra tenga un comentario encima, se necesita todo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 400px; /* Establece el tamaño del contenedor del tooltip a 200px  de las especificaciones*/
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltiptext img {
+            width: 200px; /* Establece el tamaño de la imagen dentro del tooltip de especificaciones a 200px */
+            height: auto;
+        }
+
+        /* Esto asegura que el tooltip sobre el Sherman Firefly tenga un tamaño de 300px */
+        .tooltip-firefly .tooltiptext {
+            width: 415px; /* Cambia el tamaño del tooltip del Sherman Firefly a 300px */
+        }
+
+        .tooltip-firefly .tooltiptext img {
+            width: 400px; /* Cambia el tamaño de la imagen en el tooltip del Sherman Firefly */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1>Churchill</h1>
+        <div class="tank-image">
+            <img src="./images/churchill.png" width="600" height="400" alt="[Aquí va la imagen del Churchill]">
+        </div>
+        <p>El tanque Churchill, oficialmente conocido como Infantry Tank Mk IV, fue uno de los carros de combate más emblemáticos de la Segunda Guerra Mundial. Diseñado para apoyar a la infantería, el Churchill destacó por su capacidad para superar terrenos difíciles y su grueso blindaje. Aunque inicialmente fue criticado por su baja velocidad y armamento limitado, las versiones posteriores mejoraron significativamente su desempeño.</p>
+        <br>
+        <h3>Origen y desarrollo</h3>
+        <p>El Churchill fue desarrollado como un tanque de infantería, diseñado para avanzar junto a las tropas en el campo de batalla. Su diseño se basó en las experiencias de la Primera Guerra Mundial, priorizando la protección y la capacidad de cruzar obstáculos. A lo largo de la guerra, se produjeron varias versiones del Churchill, cada una con mejoras en armamento, blindaje y motor.</p>
+        <br>
+        <br>
+        <h3>Ventajas y desventajas</h3>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Capacidad todoterreno: Su diseño le permitía superar zanjas, escombros y otros obstáculos con facilidad.</li>
+            <li>Blindaje grueso: Ofrecía una excelente protección contra la mayoría de las armas antitanque de la época.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Baja velocidad: Su diseño pesado lo hacía más lento que otros tanques contemporáneos.</li>
+            <li>Armamento inicial limitado: Las primeras versiones estaban armadas con cañones de bajo calibre, lo que las hacía menos efectivas contra otros tanques.</li>
+        </ul>
+        <br>
+        <h3>Variantes</h3>
+        <p>El Churchill tuvo varias variantes, cada una adaptada a diferentes roles en el campo de batalla. Algunas de las más notables incluyen:</p>
+        <ul>
+            <li>
+            <span class="tooltip"><strong>Churchill Crocodile:</strong>
+            </span> Equipado con un lanzallamas, utilizado para asediar posiciones enemigas fortificadas.
+            </li>
+            <li>
+            <span class="tooltip"><strong>Churchill AVRE:</strong>
+            </span> Un vehículo de recuperación y apoyo de ingenieros, armado con un cañón de 290 mm.
+            </li>
+            <li>
+            <span class="tooltip"><strong>Churchill Firefly:</strong>
+            </span> Una versión mejorada con un cañón de 17 libras, capaz de enfrentarse a los tanques alemanes más pesados.
+            </li>
+        </ul>
+        <br>
+            <span class="tooltip tooltip-firefly"><strong>Churchill.</strong>
+                <span class="tooltiptext">
+                    <img src="./images/Churchill.gif" alt="" >
+                </span>
+            </span>
+            </p>
+        
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+    </div>
+    <aside>
+        <h2>Especificaciones del Churchill</h2>
+        <p><strong>Peso:</strong> 39 t</p>
+        <p><strong>Longitud:</strong> 7,44 m</p>
+        <p><strong>Anchura:</strong> 3,25 m</p>
+        <p><strong>Altura:</strong> 2,49 m</p>
+        <p><strong>Tripulación:</strong> 5 (comandante, artillero, cargador, conductor, operador de radio)</p>
+        <p><strong>Motor:</strong> equipado con un <span class="tooltip"><strong>Bedford 12 cilindros, 350 hp</strong>
+            <span class="tooltiptext">
+                <img src="./images/motor/Siemens D 1495a.jpg" alt="Continental R-975 C1." width="200" height="150">
+            </span>
+        </span></p>
+        <p><strong>Velocidad máx:</strong> 24 km/h</p>
+        <p><strong>Autonomía máx:</strong> 144 km</p>
+        <p><strong>Armamento principal:</strong> Cañón QF de 6 libras o 75 mm</p>
+        <p><strong>Armamento secundario:</strong> 2 × ametralladoras Besa de 7,92 mm</p>
+    </aside>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SU-152 - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px;  /* Ajusta el tamaño máximo del aside */
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* esto es para que al pasar el cursor por una palabra tenga un comentario encima, se necesita todo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 230px; /* Establece el tamaño del contenedor del tooltip a 200px  de las especificaciones*/
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltiptext img {
+            width: 200px; /* Establece el tamaño de la imagen dentro del tooltip de especificaciones a 200px */
+            height: auto;
+        }
+
+        /* Esto asegura que el tooltip sobre el Sherman Firefly tenga un tamaño de 300px */
+        .tooltip-firefly .tooltiptext {
+            width: 415px; /* Cambia el tamaño del tooltip del Sherman Firefly a 300px */
+        }
+
+        .tooltip-firefly .tooltiptext img {
+            width: 400px; /* Cambia el tamaño de la imagen en el tooltip del Sherman Firefly */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1> SU-152</h1>
+        <div class="tank-image">
+            <img src="./images/SU-152.jpg" width="600" height="400" alt="[Aquí va la imagen del SU-100]">
+        </div>
+        <p>El SU-152 fue un cañón de asalto pesado soviético empleado a partir de 1943 durante la Segunda guerra mundial. Consistía en un gran cañón-obús de 152 mm montado en una casamata blindada sobre el chasis del carro pesado KV-1S. Fue usado en combate por primera vez en la Batalla de Kursk y servía para dos propósitos distintos: ofrecer apoyo de fuego de artillería a largo alcance durante los asaltos para supresión de infantería y destrucción de fortines o puestos de cañones; y como sustituto de cazacarros pesado, normalmente en emboscadas. Debido a su papel adoptado como destructor de carros improvisado, capaz de noquear a los blindados alemanes más pesados como los Tiger, Panther y Elefant con su gran potencia de fuego, fue apodado <strong>Zveroboy</strong>  ("asesino de bestias"). Cuando la producción de este tipo de máquina de guerra pasó a usar el chasis de los nuevos carros pesados IS, en los últimos meses de 1943, fue renombrado ISU-152, el cual es considerado ya un modelo de vehículo diferente a pesar de tener una apariencia muy similar. </p>
+        <br>
+        <h3>Origen y desarrollo</h3>
+        <p>El desarrollo del SU-152 comenzó en 1942 como una respuesta a la necesidad de un vehículo capaz de destruir fortificaciones y tanques pesados alemanes. Basado en el chasis del KV-1S, el SU-152 fue equipado con un cañón-obús ML-20S de 152 mm. Su producción comenzó en 1943, y fue utilizado por primera vez en la Batalla de Kursk, donde demostró ser efectivo tanto contra fortificaciones como contra los tanques Tiger y Panther.</p>
+        <br>
+        <h3>Ventajas</h3>
+        <p>Potencia de fuego: El cañón-obús de 152 mm era capaz de destruir fortificaciones y tanques pesados enemigos con un solo disparo, lo que lo hacía extremadamente efectivo en combate.</p>
+        <p>Versatilidad: Podía cumplir múltiples roles en el campo de batalla, desde apoyo de artillería hasta cazacarros pesado.</p>
+        <p>Blindaje: Su casamata blindada ofrecía una buena protección contra proyectiles enemigos, especialmente en enfrentamientos frontales.</p>
+        <br>
+        <h3>Fallas más notorias (desventajas)</h3>
+        <p>Cadencia de fuego baja: El gran tamaño del proyectil y la necesidad de cargarlo manualmente resultaban en una baja cadencia de fuego, lo que podía ser una desventaja en combates prolongados.</p>
+        <p>Movilidad limitada: Debido a su peso y al uso del chasis del KV-1S, el SU-152 tenía una movilidad limitada, especialmente en terrenos difíciles.</p>
+        <p>Espacio interno reducido: El diseño del SU-152 ofrecía poco espacio interno, lo que afectaba la comodidad de la tripulación y complicaba las operaciones en combate.</p>
+        <br>
+            <span class="tooltip tooltip-firefly"><strong>SU-152.</strong>
+                <span class="tooltiptext">
+                    <img src="./images/SU 100.png" alt="" > <!-- Queda pendiente -->
+                </span>
+            </span>
+            </p>
+        
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+    </div>
+    <aside>
+        <h2>Especificaciones del SU-152</h2>
+        <p><strong>Peso:</strong> 45,5 t</p>
+        <p><strong>Longitud:</strong> 8,95 m (con cañón)</p>
+        <p><strong>Anchura:</strong> 3,25 m</p>
+        <p><strong>Altura:</strong> 2,45 m</p>
+        <p><strong>Tripulación:</strong> 	5 (conductor, artillero, comandante, 2 cargadores)</p>
+        <p><strong>Motor:</strong> equipado con un <span class="tooltip"><strong> V-2K diésel, 600 hp</strong>
+            <span class="tooltiptext">
+            <img src="./images/motor/jarov v-2.jpg" alt="Motor V-2K diésel" width="200" height="150">
+            </span>
+        </span></p>
+        <p><strong>Velocidad máx:</strong> 43 km/h</p>
+        <p><strong>Autonomía máx:</strong> 200 - 225 km</p>
+        <p><strong>Armamento principal:</strong> Cañón-obús ML-20S de 152 mm</p>
+        <p><strong>Armamento secundario:</strong> Ametralladora DT de 7,62 mm</p>
+    </aside>
+</body>
+</html>
