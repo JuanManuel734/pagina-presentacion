@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archer - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px;  /* Ajusta el tamaño máximo del aside */
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* esto es para que al pasar el cursor por una palabra tenga un comentario encima, se necesita todo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 400px; /* Establece el tamaño del contenedor del tooltip a 200px  de las especificaciones*/
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltiptext img {
+            width: 200px; /* Establece el tamaño de la imagen dentro del tooltip de especificaciones a 200px */
+            height: auto;
+        }
+
+        /* Esto asegura que el tooltip sobre el Sherman Firefly tenga un tamaño de 300px */
+        .tooltip-firefly .tooltiptext {
+            width: 415px; /* Cambia el tamaño del tooltip del Sherman Firefly a 300px */
+        }
+
+        .tooltip-firefly .tooltiptext img {
+            width: 400px; /* Cambia el tamaño de la imagen en el tooltip del Sherman Firefly */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1>Archer</h1>
+        <div class="tank-image">
+            <img src="https://i.ytimg.com/vi/F4ukUE9uU6I/hqdefault.jpg" width="600" height="400" alt="[Aquí va la imagen del Archer]">
+        </div>
+        <p>El Archer fue un cazacarros británico basado en el chasis del tanque Valentine y armado con el potente cañón antitanque de 17 libras. Su diseño inusual colocaba el cañón apuntando hacia atrás, permitiendo una rápida retirada tras disparar.</p>
+        <br>
+        <h3>Origen y desarrollo</h3>
+        <p>Desarrollado a principios de 1943, el Archer surgió ante la necesidad de un vehículo móvil capaz de emplear el cañón de 17 libras, uno de los más efectivos contra blindados alemanes. Utilizando el confiable chasis del Valentine, los ingenieros británicos montaron el cañón en una casamata abierta, orientado hacia la parte trasera del vehículo. Esto permitía al Archer disparar y retirarse rápidamente, una táctica útil en emboscadas.</p>
+        <p>El Archer entró en servicio en 1944 y fue utilizado principalmente por unidades antitanque británicas y de la Commonwealth en Europa Occidental e Italia. Su bajo perfil y potente armamento lo hicieron efectivo en roles defensivos.</p>
+        <br>
+        <br>
+        <h3>Ventajas y desventajas</h3>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Potente cañón de 17 libras, capaz de destruir la mayoría de los tanques alemanes.</li>
+            <li>Bajo perfil, facilitando el camuflaje y la ocultación.</li>
+            <li>Capacidad de disparar y retirarse rápidamente gracias a la orientación trasera del cañón.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Protección limitada debido a la casamata abierta y blindaje ligero.</li>
+            <li>Configuración poco convencional que dificultaba el uso ofensivo.</li>
+            <li>Espacio interno reducido para la tripulación y la munición.</li>
+        </ul>
+        <br>
+        
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+        </div>
+        <aside>
+        <h2>Especificaciones del Archer</h2>
+        <p><strong>Peso:</strong> 15,75 t</p>
+        <p><strong>Longitud:</strong> 5,9 m</p>
+        <p><strong>Anchura:</strong> 2,64 m</p>
+        <p><strong>Altura:</strong> 2,28 m</p>
+        <p><strong>Tripulación:</strong> 4 (comandante, artillero, cargador, conductor)</p>
+        <p><strong>Motor:</strong> <span class="tooltip"><strong>Diesel GM 6-71M</strong>
+            <span class="tooltiptext">
+            <img src="https://wikitanks.com/images/thumb/2/2c/Archer12-700ff7b1aaccc96a48c7fe6da0131a4b.jpg/465px-Archer12-700ff7b1aaccc96a48c7fe6da0131a4b.jpg" alt="Motor AEC A190" width="200" height="150">
+            <br>
+            El General Motors 6-71M fue un motor diésel estadounidense de 6 cilindros en línea que, gracias a la sobrealimentación, desarrollaba 192 CV a 1.900 rpm. Este motor fue instalado en el cazacarros ligero británico Archer, basado en el chasis del carro de infantería Valentine, y permitía que se desplazara a mayores velocidades que el chasis original con una buena relación potencia/peso de 12,6 CV/t.
+            </span>
+        </span></p>
+        <p><strong>Velocidad máx:</strong> 32 km/h</p>
+        <p><strong>Autonomía máx:</strong> 225 km</p>
+        <p><strong>Armamento principal:</strong> Cañón antitanque QF de 17 libras (76,2 mm)</p>
+        <p><strong>Armamento secundario:</strong> 1 × ametralladora Besa de 7,92 mm</p>
+        </aside>
+</body>
+</html>

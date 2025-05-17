@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="a.css"> <!-- para el modo oscuro-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crusader - Historia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center; /* Centra el contenido principal */
+            margin: 20px;
+        }
+        .wiki-container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 20px; 
+            margin: 10px;
+        }
+        .tank-image { text-align: center; margin: 10px 0; }
+        .tank-image img { max-width: 100%; border-radius: 5px; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        aside {
+            background-color: white; /* Cambia el fondo a blanco */
+            padding: 20px; 
+            margin-left: 20px;
+            max-width: 200px;  /* Ajusta el tamaño máximo del aside */
+            align-self: flex-start; /* Alinea el aside al inicio del contenedor principal */
+            border: 2px solid #2980b9; /* Añade un borde alrededor del aside */
+            border-radius: 5px; /* Añade bordes redondeados */
+        }
+        /* esto es para que al pasar el cursor por una palabra tenga un comentario encima, se necesita todo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 400px; /* Establece el tamaño del contenedor del tooltip a 200px  de las especificaciones*/
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltiptext img {
+            width: 200px; /* Establece el tamaño de la imagen dentro del tooltip de especificaciones a 200px */
+            height: auto;
+        }
+
+        /* Esto asegura que el tooltip sobre el Sherman Firefly tenga un tamaño de 300px */
+        .tooltip-firefly .tooltiptext {
+            width: 415px; /* Cambia el tamaño del tooltip del Sherman Firefly a 300px */
+        }
+
+        .tooltip-firefly .tooltiptext img {
+            width: 400px; /* Cambia el tamaño de la imagen en el tooltip del Sherman Firefly */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="../darkmode.js"></script>  <!-- para el modo oscuro-->
+    <input class="l" type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+
+    <div class="wiki-container">
+        <h1>Crusader</h1>
+        <div class="tank-image">
+            <img src="https://p.turbosquid.com/ts-thumb/gm/6MXPFy/lEMC7lXY/crusader_3/jpg/1505125200/600x600/fit_q87/3e23084e45215ac4e7fde8b9ebdfdaa9bd79d87f/crusader_3.jpg" width="600" height="400" alt="Crusader Mk III">
+        </div>
+        <p>El Crusader fue un tanque crucero británico ampliamente utilizado durante la Segunda Guerra Mundial, especialmente en la Campaña del Norte de África. Destacó por su velocidad y maniobrabilidad, aunque sufría de blindaje y armamento limitados frente a sus rivales alemanes.</p>
+        <br>
+        <h3>Origen y desarrollo</h3>
+        <p>El desarrollo del Crusader comenzó a finales de la década de 1930 como parte de la serie de tanques crucero británicos. Entró en servicio en 1941 y fue uno de los principales tanques británicos durante la Operación Crusader y la batalla de El Alamein. Su diseño priorizaba la velocidad para explotar brechas en las líneas enemigas, aunque su cañón de 2 libras (40 mm) pronto quedó obsoleto frente a los tanques alemanes mejor armados y blindados.</p>
+        <p>El Crusader fue reemplazado gradualmente por modelos más avanzados como el Cromwell, pero su papel en las primeras etapas del conflicto fue fundamental para las fuerzas británicas.</p>
+        <br>
+        <br>
+        <h3>Ventajas y desventajas</h3>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Alta velocidad y movilidad: Ideal para operaciones rápidas en el desierto.</li>
+            <li>Producción en masa: Permitió equipar rápidamente a las fuerzas británicas.</li>
+            <li>Perfil bajo: Más difícil de detectar y atacar.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Blindaje y armamento insuficientes frente a tanques alemanes.</li>
+            <li>Problemas mecánicos frecuentes, especialmente en condiciones desérticas.</li>
+            <li>Limitada capacidad de modernización.</li>
+        </ul>
+        <br>
+        
+        <div class="back">
+            <a href="../index.html">Volver a la Enciclopedia</a>
+        </div>
+        </div>
+        <aside>
+        <h2>Especificaciones del Crusader</h2>
+        <p><strong>Peso:</strong> 20 t</p>
+        <p><strong>Longitud:</strong> 5,99 m</p>
+        <p><strong>Anchura:</strong> 2,64 m</p>
+        <p><strong>Altura:</strong> 2,24 m</p>
+        <p><strong>Tripulación:</strong> 4 (comandante, artillero, cargador y conductor)</p>
+        <p><strong>Motor:</strong> <span class="tooltip"><strong>Nuffield Liberty Mark III, 340 hp</strong>
+            <span class="tooltiptext">
+            <img src="https://wikitanks.com/images/thumb/a/a1/Birth_of_a_British_Tank-_Tank_Production_in_England%2C_1941_D4470.jpg/465px-Birth_of_a_British_Tank-_Tank_Production_in_England%2C_1941_D4470.jpg" alt="Nuffield Liberty Mark III" width="200" height="150">
+            <br>
+            El Nuffield Liberty Mark III era un motor de gasolina V12 basado en el diseño estadounidense Liberty. Proporcionaba buena velocidad, pero era propenso a sobrecalentarse en el desierto.
+            </span>
+        </span></p>
+        <p><strong>Velocidad máx:</strong> 42 km/h</p>
+        <p><strong>Autonomía máx:</strong> 320 km</p>
+        <p><strong>Armamento principal:</strong> Cañón de 2 libras (40 mm) o 6 libras (57 mm) en versiones posteriores</p>
+        <p><strong>Armamento secundario:</strong> 1 × ametralladora Besa de 7,92 mm</p>
+        </aside>
+</body>
+</html>
