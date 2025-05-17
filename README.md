@@ -1,1 +1,1 @@
-este proyecto es para empezar a usar Git y Github con un proyecto web  html , css y js
+este proyecto es para empezar a usar Git y Github con un proyecto web  html , css y js casi terminado
