@@ -2,21 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
     <link rel="stylesheet" href="comentarios.css">
+    <link rel="icon" href="./historias tanques/images/icon.png">
 </head>
 <body>
+    <h1>Comentarios</h1>
     <section class="comentarios">
         <h2>Sección de Comentarios</h2>
-        <form class="comentarios-form" id="comentariosForm">
+        <form class="comentarios-form" id="comentariosForm" method="POST" action="/">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
             
             <label for="comentario">Comentario:</label>
             <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
             
-            <button type="submit">
+            <button type="submit" id="btnGuardar">
                 <div class="svg-wrapper-1">
                     <div class="svg-wrapper">
                         <svg
@@ -39,45 +40,10 @@
         <div class="comentarios-lista">
             <h3>Comentarios Recientes</h3>
             <ul id="listaComentarios">
-                <!-- Los comentarios se agregarán dinámicamente aquí -->
+                <!-- Los comentarios se insertan aquí por el servidor -->
             </ul>
         </div>
     </section>
-    <script>
-        const form = document.getElementById('comentariosForm');
-        const listaComentarios = document.getElementById('listaComentarios');
-
-        // Cargar comentarios guardados al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
-            comentariosGuardados.forEach(comentario => agregarComentario(comentario.nombre, comentario.texto));
-        });
-
-        // Manejar el envío del formulario
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const comentario = document.getElementById('comentario').value;
-
-            agregarComentario(nombre, comentario);
-            guardarComentario(nombre, comentario);
-
-            form.reset();
-        });
-
-        // Función para agregar un comentario a la lista
-        function agregarComentario(nombre, texto) {
-            const li = document.createElement('li');
-            li.innerHTML = `<strong>${nombre}:</strong> ${texto}`;
-            listaComentarios.appendChild(li);
-        }
-
-        // Función para guardar un comentario en localStorage
-        function guardarComentario(nombre, texto) {
-            const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
-            comentarios.push({ nombre, texto });
-            localStorage.setItem('comentarios', JSON.stringify(comentarios));
-        }
-    </script>
+    <p><a href="index.html">Volver al inicio</a></p>
 </body>
 </html>
